@@ -365,4 +365,9 @@ class FashionJSONLDataset(AutoPairDataset):
         """Get item by index for PyTorch DataLoader compatibility"""
         # Return the processed dataset item
         processed_dataset = self.main()
-        return processed_dataset[idx] 
+        return processed_dataset[idx]
+    
+    @property
+    def column_names(self):
+        """Return column names for HuggingFace Transformers compatibility"""
+        return ['instruction_text', 'query_text', 'query_image_path', 'target_image_path', 'task_category', 'style_id']
