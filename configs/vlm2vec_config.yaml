@@ -1,0 +1,11 @@
+# Simple VLM2Vec Training Configuration
+# Just the datasets with weights for quick loss testing
+
+# Training Dataset Configuration
+FashionJSONLTrain:
+    dataset_parser: fashion_jsonl
+    jsonl_path: sample_test_data/enhanced_train_dataset.jsonl
+    subset_name: enhanced_fashion_train
+    dataset_split: train
+    num_sample_per_subset: 3  # Small for quick test
+    weight: 1.0 
